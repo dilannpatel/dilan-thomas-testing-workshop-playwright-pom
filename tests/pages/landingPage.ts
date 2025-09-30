@@ -8,7 +8,7 @@ class LandingPage {
 
     constructor() {
         this.title = `.govuk-heading-xl`
-        // this.text =
+        this.text = '.govuk-govspeak'
     }
 
     async checkPageLoads(page: Page): Promise<void> {
@@ -18,7 +18,13 @@ class LandingPage {
         // Check all elements of the page
         await Promise.all([
             expect(page.locator(this.title)).toHaveText(landingPage_content.pageTitle),
-            // Continue checking the elements after adding them to the content file!
+            // expect(page.locator(this.text)).toHaveText(landingPage_content.pText1),
+            await expect(page.locator(this.text)).toContainText([
+            landingPage_content.pText1,
+            landingPage_content.liText1,
+            landingPage_content.liText2,
+            landingPage_content.pText2])         
+// expect(page.locator('ul > li')).toHaveText([landingPage_content.liText1, landingPage_content.liText2])
         ]);
     }
 
