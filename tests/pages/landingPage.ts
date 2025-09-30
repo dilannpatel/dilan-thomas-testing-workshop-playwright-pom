@@ -31,6 +31,7 @@ class LandingPage {
     }
 
     async continueOn(page: Page): Promise<void> {
+        expect(page.locator(this.startButton)).toHaveText(landingPage_content.button);
         await page.locator(this.startButton).click();
         await expect(page).toHaveURL('/calculate-your-holiday-entitlement/y');
     }
