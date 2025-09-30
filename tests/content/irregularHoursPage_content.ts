@@ -1,9 +1,10 @@
 const irregularHoursPage_content = {
-    pageTitle: "Calculate holiday entitlement",
-    pText1: "Use this tool to calculate holiday entitlement for:",
-    liText1: "a full leave year",
-    liText2: "part of a leave year, if the job started or finished part way through the year",
-    pText2: "If an employee works irregular hours or for part of the year, you also use this calculator to work out how much leave they’ve built up (‘accrued’) over a pay period."
+    caption: "Calculate holiday entitlement",
+    questionTitle: "Does the employee work irregular hours or for part of the year?",
+    hintText: "Irregular hours’ means the number of hours an employee works in a pay period often or always changes. ‘Part of the year’ means there are periods of at least a week in a leave year where the employee does not need to work and is not paid.",
+    label1: "Yes",
+    label2: "No",
+    continueButton: "Continue"
 } as const;
 
 export default irregularHoursPage_content
