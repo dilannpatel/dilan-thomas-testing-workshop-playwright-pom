@@ -24,6 +24,7 @@ class LandingPage {
 
     async continueOn(page: Page): Promise<void> {
         // Click the continue button
+        // change to landingpage
 
     }
 }
