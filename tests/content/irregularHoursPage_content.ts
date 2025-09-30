@@ -1,4 +1,4 @@
-const landingPage_content = {
+const irregularHoursPage_content = {
     pageTitle: "Calculate holiday entitlement",
     pText1: "Use this tool to calculate holiday entitlement for:",
     liText1: "a full leave year",
@@ -6,4 +6,4 @@ const landingPage_content = {
     pText2: "If an employee works irregular hours or for part of the year, you also use this calculator to work out how much leave they’ve built up (‘accrued’) over a pay period."
 } as const;
 
-export default landingPage_content
+export default irregularHoursPage_content
