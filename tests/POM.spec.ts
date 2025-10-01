@@ -4,6 +4,10 @@ import IrregularHoursPage from "./pages/irregularHoursPage";
 import IrregularHoursAndPartYearPage from "./pages/irregularHoursAndPartYearPage";
 import AnnualisedHours from "./pages/annualisedHours"
 import HolidayEntitlementPage from "./pages/holidayEntitlementPage";
+import WorkOutHolidayPage from "./pages/workOutHolidayPage";
+import DaysWorkedPerWeekPage from "./pages/daysWorkedPerWeekPage";
+
+
 
 test(`Page object model happy path for second test`, async ({ page }): Promise<void> => {
     const landingPage: LandingPage = new LandingPage();
@@ -24,6 +28,16 @@ test(`Page object model happy path for second test`, async ({ page }): Promise<v
     await holidayEntitlementPage.checkPageLoads(page);
     await holidayEntitlementPage.answerQuestion(page);
     await holidayEntitlementPage.continueOn(page);
+
+    const workOutHolidayPage: WorkOutHolidayPage = new WorkOutHolidayPage();
+    await workOutHolidayPage.checkPageLoads(page);
+    await workOutHolidayPage.answerQuestion(page);
+    await workOutHolidayPage.continueOn(page);
+
+    const daysWorkedPerWeekPage: DaysWorkedPerWeekPage = new DaysWorkedPerWeekPage();
+    await daysWorkedPerWeekPage.checkPageLoads(page);
+    await daysWorkedPerWeekPage.answerQuestion(page);
+    await daysWorkedPerWeekPage.continueOn(page);
     
 });
 
