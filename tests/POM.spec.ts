@@ -5,6 +5,7 @@ import IrregularHoursAndPartYearPage from "./pages/irregularHoursAndPartYearPage
 import HolidayEntitlementPage from "./pages/holidayEntitlementPage";
 import WorkOutHolidayPage from "./pages/workOutHolidayPage";
 import DaysWorkedPerWeekPage from "./pages/daysWorkedPerWeekPage";
+import InfomationBasedOnAnswersPage from "./pages/infomationBasedOnAnswersPage";
 
 
 
@@ -37,6 +38,12 @@ test(`Page object model happy path for second test`, async ({ page }): Promise<v
     await daysWorkedPerWeekPage.checkPageLoads(page);
     await daysWorkedPerWeekPage.answerQuestion(page);
     await daysWorkedPerWeekPage.continueOn(page);
+
+    const infomationBasedOnAnswersPage: InfomationBasedOnAnswersPage = new InfomationBasedOnAnswersPage();
+    await infomationBasedOnAnswersPage.checkPageLoads(page);
+    await infomationBasedOnAnswersPage.displayInformation(page);
+    await infomationBasedOnAnswersPage.checkYourAnswers(page);
+
     
 });
 
