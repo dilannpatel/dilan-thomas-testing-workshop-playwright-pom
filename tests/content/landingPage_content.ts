@@ -1,5 +1,4 @@
 const landingPage_content = {
-    pageTitle: "Calculate holiday entitlement",
     pText1: "Use this tool to calculate holiday entitlement for:",
     liText1: "a full leave year",
     liText2: "part of a leave year, if the job started or finished part way through the year",
