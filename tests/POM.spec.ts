@@ -3,6 +3,7 @@ import LandingPage from "./pages/landingPage";
 import IrregularHoursPage from "./pages/irregularHoursPage";
 import IrregularHoursAndPartYearPage from "./pages/irregularHoursAndPartYearPage";
 import AnnualisedHours from "./pages/annualisedHours"
+import HolidayEntitlementPage from "./pages/holidayEntitlementPage";
 
 test(`Page object model happy path for second test`, async ({ page }): Promise<void> => {
     const landingPage: LandingPage = new LandingPage();
@@ -19,10 +20,11 @@ test(`Page object model happy path for second test`, async ({ page }): Promise<v
     await irregularHoursAndPartYearPage.answerQuestion(page);
     await irregularHoursAndPartYearPage.continueOn(page);
 
-    const annualisedHours: AnnualisedHours = new AnnualisedHours();
-    await annualisedHours.checkPageLoads(page);
-    // await annualisedHours.answerQuestion(page);
-    await annualisedHours.continueOn(page);
+    const holidayEntitlementPage: HolidayEntitlementPage = new HolidayEntitlementPage();
+    await holidayEntitlementPage.checkPageLoads(page);
+    await holidayEntitlementPage.answerQuestion(page);
+    await holidayEntitlementPage.continueOn(page);
+    
 });
 
 

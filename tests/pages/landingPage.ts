@@ -1,6 +1,8 @@
 import { Page } from 'playwright';
 import {expect} from "@playwright/test";
 import landingPage_content from "../content/landingPage_content";
+import questionFormatStyling_content from "../content/questionFormatStyling_content";
+
 
 class LandingPage {
     private readonly title: string;
@@ -21,7 +23,7 @@ class LandingPage {
 
         // Check all elements of the page
         await Promise.all([
-            expect(page.locator(this.title)).toHaveText(landingPage_content.pageTitle),
+            expect(page.locator(this.title)).toHaveText(questionFormatStyling_content.captionText),
             expect(page.locator(this.text)).toContainText(landingPage_content.pText1),
             expect(page.locator(this.text)).toContainText(landingPage_content.liText1),
             expect(page.locator(this.text)).toContainText(landingPage_content.liText2),
