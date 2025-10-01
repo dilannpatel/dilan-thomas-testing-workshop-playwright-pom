@@ -2,6 +2,7 @@ import {test} from "@playwright/test";
 import LandingPage from "./pages/landingPage";
 import IrregularHoursPage from "./pages/irregularHoursPage";
 import IrregularHoursAndPartYearPage from "./pages/irregularHoursAndPartYearPage";
+import AnnualisedHours from "./pages/annualisedHours"
 
 test(`Page object model happy path for second test`, async ({ page }): Promise<void> => {
     const landingPage: LandingPage = new LandingPage();
@@ -17,6 +18,11 @@ test(`Page object model happy path for second test`, async ({ page }): Promise<v
     await irregularHoursAndPartYearPage.checkPageLoads(page);
     await irregularHoursAndPartYearPage.answerQuestion(page);
     await irregularHoursAndPartYearPage.continueOn(page);
+
+    const annualisedHours: AnnualisedHours = new AnnualisedHours();
+    await annualisedHours.checkPageLoads(page);
+    // await annualisedHours.answerQuestion(page);
+    await annualisedHours.continueOn(page);
 });
 
 
