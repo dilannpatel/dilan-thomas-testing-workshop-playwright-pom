@@ -1,5 +1,6 @@
 const questionFormatStyling_content = {
     caption: `.govuk-caption-l`,
+    captionXL: '.govuk-caption-xl',
     captionText: "Calculate holiday entitlement",
     questionTitle: `.govuk-fieldset__legend`,
     hintText: `.govuk-hint`,
